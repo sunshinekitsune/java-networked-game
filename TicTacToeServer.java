@@ -117,6 +117,9 @@ public class TicTacToeServer {
             } catch (IOException e) {
                 System.out.println("Player disconnected: " + e);
             } finally {
+                if (!game.hasWinner() && !game.boardFilled() && opponent != null && opponent.output != null) {
+                    opponent.output.println("OTHER_PLAYER_LEFT");
+                }
                 try { socket.close(); } catch (IOException e) {}
             }
         }

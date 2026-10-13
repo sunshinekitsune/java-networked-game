@@ -62,6 +62,9 @@ void play() {
                 System.out.println(
                         res.equals("DEFEAT") ? "Game over, you lost." : "Game over. It's a tie!");
                 break;
+            } else if (res.equals("OTHER_PLAYER_LEFT")) {
+                System.out.println("\nOpponent left the game. Match ended.");
+                break;
             }
         }
     } catch (IOException e) {
