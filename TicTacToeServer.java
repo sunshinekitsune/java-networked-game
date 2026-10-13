@@ -99,6 +99,9 @@ public class TicTacToeServer {
 
                 while (true) {
                     String command = input.readLine();
+                    if (command == null) {
+                        return;
+                    }
                     if (command.startsWith("MOVE")) {
                         int loc = Integer.parseInt(command.substring(5));
                         if (game.legalMove(loc, this)) {
