@@ -43,3 +43,5 @@ First to get 3 in a row wins.
 You can type QUIT to end the game early.
 
 Get 3 in a row to win, if all tiles are captured it is a tie.
+
+[Watch the gameplay video](https://github.com/user-attachments/assets/2e56269d-e741-4090-abf9-e7b66e65833a)
