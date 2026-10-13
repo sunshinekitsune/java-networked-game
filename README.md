@@ -45,3 +45,35 @@ You can type QUIT to end the game early.
 Get 3 in a row to win, if all tiles are captured it is a tie.
 
 [Watch the gameplay video](https://github.com/user-attachments/assets/2e56269d-e741-4090-abf9-e7b66e65833a)
+
+## API Documentation
+
+### Client Requests
+
+``MOVE``: <0-8> Ask server to mark a specific square.
+
+``QUIT``: Disconnects the player from the server.
+
+## Server Responses
+
+``WELCOME``: <X, O> Informs the player their mark symbol.
+
+``MESSAGE``: <text> Status update.
+
+``MESSAGE?``: <text> Error response for out of turn, invalid move, etc.
+
+``YOUR_TURN``: Asks client for a move.
+
+``VALID_MOVE``: Confirms the player's move.
+
+``OPPONENT_MOVED``: <0-8> Informs the other client of a move.
+
+``WAIT``: Tells the client to wait for an opponent.
+
+``VICTORY``: Tells the client they won.
+
+``DEFEAT``: Tells the client they lost.
+
+``TIE``: Tells the client they tied.
+
+``OTHER_PLAYER_LEFT``: Tells the client the other player has left early.
